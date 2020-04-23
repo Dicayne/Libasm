@@ -2,7 +2,23 @@
 The purpose of this Lib is an introdution to the assambly 64 nasm, intel syntax language
 
 # Testing methode
-
+### MACOS
+```sh
+$ make re
+$ ./cub3D map.cub
+```
+### LINUX
+Modifie :
+```sh
+$%.o: %.s
+$	nasm -f macho64 $^
+```
+to :
+```sh
+$%.o: %.s
+$	nasm -f elf64 $^
+```
+and then:
 ```sh
 $ make re
 $ ./cub3D map.cub
