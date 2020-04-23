@@ -23,7 +23,7 @@ and then:
 $ make re
 $ ./cub3D map.cub
 ```
-#### you can modified main.c as you want
+#### You can modified main.c as you want
 
 # Some Sources
 
