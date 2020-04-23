@@ -6,12 +6,12 @@
 #    By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/20 13:11:26 by vmoreau           #+#    #+#              #
-#    Updated: 2020/04/21 02:13:50 by vmoreau          ###   ########.fr        #
+#    Updated: 2020/04/22 15:34:16 by vmoreau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC +=	src/ft_strlen.s		src/ft_write.s		src/ft_read.s \
-		src/ft_strcpy.s
+SRC +=	src/ft_strlen.s		src/ft_write.s		src/ft_read.s	\
+		src/ft_strcpy.s		src/ft_strcmp.s		src/ft_strdup.s	\
 
 OBJ = $(SRC:%.s=%.o)
 

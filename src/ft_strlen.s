@@ -1,11 +1,13 @@
 			section .text
 			global _ft_strlen
+
+;size_t rax	ft_strlen(const char *rdi);
 _ft_strlen :
-			xor rax, rax	; rax = valeur de retour, initialiser a 0
-			jmp comp		; saut a la fonction comp
+			xor rax, rax	; rax = return value, initialized 0
+			jmp comp		; jump to comp layer
 incr :
-			inc rax			;incrmentation de rax et retour a la fonction comp
+			inc rax			;increment rax
 comp :
-			cmp BYTE[rdi + rax], 0	;rdi = argument 1 ->str
-			jnz incr				; si cmp str[rax] != 0 saut a la fonction incr
-			ret						; sinon retourn la valeur de rax
+			cmp BYTE[rdi + rax], 0	;rdi = arg 1 ->str
+			jnz incr				; if cmp != 0 str[rax] != \0 then jump to incr layer
+			ret						; else return
