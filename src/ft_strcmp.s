@@ -16,7 +16,7 @@ check_end:
 			cmp BYTE[rdi + rcx], 0	;check if rdi[rcx] != \0 -> jump to incr layer
 			jnz incr
 			cmp BYTE[rsi + rcx], 0	;check if rsi[rcx] != \0 -> jump to diff_bellow
-			jnz diffb
+			jnz diff_bellow
 			mov rax, 0				;else if both = \0 return 0
 			ret
 compare:

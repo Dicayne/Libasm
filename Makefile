@@ -6,7 +6,7 @@
 #    By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/20 13:11:26 by vmoreau           #+#    #+#              #
-#    Updated: 2020/04/22 15:34:16 by vmoreau          ###   ########.fr        #
+#    Updated: 2020/04/23 02:56:00 by vmoreau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,9 @@ EXE = asm
 
 all: $(NAME)
 
-$(NAME): $(OBJ) main.c
+$(NAME): $(OBJ)
 	ar rc $@ $(OBJ)
-	gcc -o $(EXE) $@ main.c -g3 -fsanitize=address
+	gcc -o $(EXE) $@ src/main.c
 
 %.o: %.s
 	nasm -f macho64 $^
