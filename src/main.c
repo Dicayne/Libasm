@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 18:03:55 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/04/23 02:54:32 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/04/23 03:08:54 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main()
 	char stock[nb_read + 1];
 	while (ret > 0)
 	{
-		ret = read(fd, stock, -1);
+		ret = ft_read(fd, stock, nb_read);
 		if (ret > -1)
 			printf("%s",stock);
 		else
@@ -56,8 +56,8 @@ int main()
 
 	// Strcmp
 	printf("%sTest FT_STRCMP :\n%s", CYAN, NC);
-	char *s1 = "q";
-	char *s2 = "";
+	char *s1 = "abcef";
+	char *s2 = "abcee";
 	printf("Me: %d | Base: %d\n", ft_strcmp(s1, s2), strcmp(s1, s2));
 	printf("%s#--------------------#%s\n", RED, NC);
 
