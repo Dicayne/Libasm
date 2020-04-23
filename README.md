@@ -10,20 +10,20 @@ $ ./cub3D map.cub
 ### LINUX
 Modifie :
 ```sh
-$%.o: %.s
-$	nasm -f macho64 $^
+%.o: %.s
+	nasm -f macho64 $^
 ```
 to :
 ```sh
-$%.o: %.s
-$	nasm -f elf64 $^
+%.o: %.s
+	nasm -f elf64 $^
 ```
 and then:
 ```sh
 $ make re
 $ ./cub3D map.cub
 ```
-you can modified main.c as you want
+#### you can modified main.c as you want
 
 # Some Sources
 
