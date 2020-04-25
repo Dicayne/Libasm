@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 02:53:18 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/04/23 02:54:03 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/04/24 19:38:58 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <string.h>
+#include <errno.h>
 # define NC "\033[0m"
 # define BLACK "\033[0;30m"
 # define RED "\033[0;31m"

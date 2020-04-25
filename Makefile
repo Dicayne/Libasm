@@ -6,7 +6,7 @@
 #    By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/20 13:11:26 by vmoreau           #+#    #+#              #
-#    Updated: 2020/04/23 03:20:24 by vmoreau          ###   ########.fr        #
+#    Updated: 2020/04/24 19:56:42 by vmoreau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ all: $(NAME)
 
 $(NAME): echoCL $(OBJ) echoOK echoAR
 	ar rc $@ $(OBJ)
-	gcc -o $(EXE) $@ src/main.c
+	gcc -o $(EXE) $@ src/main.c -fsanitize=address
 	printf "$(GREEN)Compilation Success $(RED)./asm Ready!!$(NC)\n"
 
 %.o: %.s

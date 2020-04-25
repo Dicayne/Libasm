@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 18:03:55 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/04/23 03:08:54 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/04/25 13:52:51 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,12 @@ int main()
 	int ret = 0;
 	printf("%sTest FT_WRITE :%s\n", CYAN, NC);
 	write(1, "Me:   ", 6);
-	ret = ft_write(1, str, ft_strlen(str));
-	printf("\n%d\n", ret);
+	ret = ft_write(-1, str, ft_strlen(str));
+	if (ret == -1)
+	{
+		printf("\n%d\n", ret);
+		printf("Error :%s %s %s\n",RED, strerror(errno), NC);
+	}
 	write(1, "Base: ", 6);
 	ret = write(1, str, strlen(str));
 	printf("\n%d", ret);
@@ -41,9 +45,12 @@ int main()
 	{
 		ret = ft_read(fd, stock, nb_read);
 		if (ret > -1)
-			printf("%s",stock);
+			printf("%s", stock);
 		else
-			printf("%d", ret);
+		{
+			printf("%d\n", ret);
+			printf("Error :%s %s %s",RED, strerror(errno), NC);
+		}
 	}
 	printf("\n%s#--------------------#%s\n", RED, NC);
 
