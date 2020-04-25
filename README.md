@@ -5,7 +5,7 @@ The purpose of this Lib is an introdution to the assambly 64 nasm, intel syntax 
 ## MACOS
 ```sh
 $ make re
-$ ./cub3D map.cub
+$ ./asm
 ```
 ## LINUX
 Modifie :
@@ -21,7 +21,7 @@ to :
 and then:
 ```sh
 $ make re
-$ ./cub3D map.cub
+$ ./asm
 ```
 #### You can modified main.c as you want
 
